@@ -1,0 +1,13 @@
+[Unit]
+Description=Pi Camera Supervisor
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/home/pi
+ExecStart=/home/pi/supervisor-xojo/Supervisor
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
